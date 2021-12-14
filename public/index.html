@@ -20,15 +20,28 @@
       })
       .catch(err => console.error(err))
 
-    // const user = {
-    //   name: 'Jack Doe',
-    //   email: 'jackdoe@gmail.com',
-    //   phone: 1333333333,
-    //   isAdmin: false
+    // const change = {
+    //   activityDate: '12/15/21',
+    //   activity: 'eat good',
+    //   completeBy: 'tomorrow  mid-day',
+    //   complete: false
     // }
 
-    // axios.post('/api/to_do_list', to_do_list)
+    // axios.post('/api/to_do_list', change)
     //   .then(() => console.log('User Created!'))
+    //   .catch(err => console.error(err))
+
+    const uid = 0
+    const changes = { complete: true }
+    
+    axios.put(`/api/to_do_list/${uid}`, changes)
+      .then(() => console.log('Activity updated!'))
+      .catch(err => console.error(err))
+
+    // const uid = 3
+
+    // axios.delete(`/api/users/${uid}`)
+    //   .then(() => console.log('User deleted!'))
     //   .catch(err => console.error(err))
   </script>
 </body>
